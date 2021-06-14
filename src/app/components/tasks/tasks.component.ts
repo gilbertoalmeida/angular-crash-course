@@ -17,5 +17,4 @@ export class TasksComponent implements OnInit {
     //fires of on init, so that's when we want to use the service to get the tasks.
     this.taskService.getTasks().subscribe(tasks => this.tasks = tasks) //since it is an observable, we subscribe and get something from it, it is kinda like a promisse
   }
-
 }
