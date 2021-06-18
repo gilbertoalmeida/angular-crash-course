@@ -20,4 +20,9 @@ export class TaskService {
     //this is importing the tasks as an observable from our local server from json-server. Database is db.json at the root. It's a mock server, it will do the CRUD operations in this local file database
     return this.http.get<Task[]>(this.apiUrl)
   }
+
+  deleteTask(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`
+    return this.http.delete<Task>(url)
+  }
 }
