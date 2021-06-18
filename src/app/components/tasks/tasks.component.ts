@@ -22,4 +22,8 @@ export class TasksComponent implements OnInit {
     //deleteTask deletes the task passed from the db file through the server. And we are then "manually" removing this same task from this.task to remove it from the UI without having to update the page. The subscribe is working as a .then
     this.taskService.deleteTask(task).subscribe(() => this.tasks = this.tasks.filter(t => t.id !== task.id))
   }
+
+  toggleReminder(task: Task) {
+    this.taskService.toggleReminder(task).subscribe(() => task.reminder = !task.reminder)
+  }
 }
