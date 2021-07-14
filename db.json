@@ -16,13 +16,7 @@
       "id": 3,
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
-      "reminder": false
-    },
-    {
-      "id": 4,
-      "text": "Train",
-      "day": "May 8th at 10:30pm",
-      "reminder": false
+      "reminder": true
     }
   ]
 }

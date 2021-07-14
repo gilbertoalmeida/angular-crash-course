@@ -1,5 +1,5 @@
 <!-- [()] is a two way binding. It is saving what's in the input to that variable -->
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
   <div class="form-control">
     <label for="text">Task</label>
     <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="add a task" />
